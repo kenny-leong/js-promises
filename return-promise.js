@@ -11,8 +11,8 @@ function runOnTreadmill() {
   return new Promise(resolve => {
     setTimeout(() => {
       console.log('done running on treadmill')
+      resolve();
     }, 500)
-    resolve();
   })
 
 }
