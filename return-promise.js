@@ -21,16 +21,16 @@ function liftWeights() {
   return new Promise(resolve => {
     setTimeout(() => {
       console.log('done lifting weights')
+      resolve();
     }, 2000)
-    resolve();
   })
 
 }
 
 function workout() {
   stretch()
-  .then(() => runOnTreadmill())
-  .then(() => liftWeights())
+  .then(runOnTreadmill)
+  .then(liftWeights)
   .then(() => console.log('done working out'));
 }
 
@@ -44,6 +44,7 @@ output.
 
 workout();
   // should print out the following:
-
-
-    // done working out
+    // done stretching
+    //done running on treadmill
+    //done lifting weights
+    //done working out
